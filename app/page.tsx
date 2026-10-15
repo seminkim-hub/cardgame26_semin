@@ -51,7 +51,7 @@ export default function Home() {
   const [leaderboardLoading, setLeaderboardLoading] = useState(false);
   const [leaderboardMessage, setLeaderboardMessage] = useState("");
   const startTime = useRef(0);
-  const mismatchTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const mismatchTimer = useRef<number | null>(null);
 
   useEffect(() => {
     if (screen !== "playing") return;
